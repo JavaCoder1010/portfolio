@@ -1,17 +1,13 @@
 window.onload = function() {
-    // Show the modal when the page loads
     document.getElementById('cookies').style.display = 'block';
 
-    // Yes button action
     document.getElementById('yesBtn').onclick = function() {
         document.getElementById('cookies').style.display = 'none';
-        // Continue to the website or any action for age verification
+
     };
 
-    // No button action
     document.getElementById('noBtn').onclick = function() {
         alert('Mentira, no hay cookies.');
-        window.location.href = 'https://www.google.com'; // Redirect or close
     };
 };
 
