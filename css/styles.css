@@ -129,7 +129,8 @@ main h1 {
     padding: 20px;
 }
 #footer {
-    background-color: #f1f1f1;
+    background-color: rgb(70, 68, 68);
+    color: white;
     text-align: center;
     padding: 20px;
 }
@@ -171,8 +172,14 @@ main h1 {
         font-size: 0.9em;
     }
 
+    #index, #sobremi{
+        display: flex;
+        flex-direction: column;
+    }
+
     .navbar {
         padding: 10px;
+        height: auto;
     }
 
     main {
@@ -190,6 +197,26 @@ main h1 {
     main h1 {
         font-size: 1.8em;
     }
+    .caja_contacto h2 {
+        font-size: 2rem;
+    }
+
+    .caja_contacto p {
+        font-size: 1.125rem;
+    }
+
+    .formulario h2 {
+        font-size: 1.75rem;
+    }
+
+    .campo label {
+        font-size: 1rem;
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 0.875rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -206,8 +233,8 @@ main h1 {
     }
 
     main {
-        grid-template-columns: 1fr;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
         padding-top: 25vh;
     }
 
@@ -227,61 +254,81 @@ main h1 {
         font-size: 12px;
         padding: 8px;
     }
+    .caja_contacto {
+        padding: 1.5%;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
 }
 
 .formulario {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    color: #fff;
 }
 
 .formulario h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #fff;
+    text-align: center;
+    margin-bottom: 3vw;
+    font-size: 4vw;
+    color: #fff
+}
+
+.caja-consultas {
     display: flex;
-    align-content: center;
+    flex-direction: column;
 }
 
-.item-formulario {
-    margin-bottom: 15px;
+.campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.item-formulario label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #fff;
+.campo label {
+    flex: 1;
+    font-size: 1.5vw;
+    margin-right: 10px;
 }
 
-.item-formulario input,
-.item-formulario textarea {
-    width: 100%;
+.campo input,
+.campo textarea {
+    flex: 2;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ccc; 
     font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
 }
 
-.item-formulario textarea {
-    resize: vertical;
-    height: 150px;
+
+.campo input:valid,
+.campo textarea:valid {
+    border: 2px solid green;
 }
 
-.enviar {
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 20px;
+
+.campo input:invalid:focus,
+.campo textarea:invalid:focus,
+.campo input:invalid:blur,
+.campo textarea:invalid:blur {
+    border: 2px solid red;
+}
+
+.caja-consultas button {
+    padding: 10px;
+    background-color: #2eb3c5;
+    color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.enviar:hover {
-    background-color: #218838;
+.caja-consultas button:hover {
+    background-color: #1e737e;
 }
 
 #fotoportafolio{
