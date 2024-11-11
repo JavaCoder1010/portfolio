@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(4, 152, 182, 1) 100%);
+    font-family: sans-serif;
+}
+
+header {
+    padding-bottom: 3%
+}
+
+.navbar {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    padding: 5px 15px;
+    position: fixed;
+    background-color: black;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logopersonal {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    padding: 10px 15px;
+    font-size: 1.5em;
+}
+
+#menu li {
+    list-style: none;
+}
+
+a.menuitem {
+    text-decoration: none;
+    color: #fff;
+}
+
+#menu li:hover {
+    transform: scale(1.30);
+    transition: ease-in .4s;
+}
+
+#index, #sobremi{
+    padding-top: 14vh;
+    color: #fff;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+#index, #sobremi{
+    padding-top: 14vh;
+    color: #fff;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    background-color: rgb(65, 64, 64);
+    color: #ddd;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+button{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(109, 6, 26);
+    color: aliceblue;
+    border: none;
+}
+
+main h1 {
+    font-size: 2.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.portada {
+    margin-top: 25px;
+    margin-left: 30px;
+    padding-left: 1em;
+}
+
+.textoportada {
+    font-size: 20px;
+    margin-bottom: 1em;
+}
+
+.botondescargarcv {
+    padding: 10px;
+    border: #fff;
+    background-color: aqua;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.botondescargarcv:hover {
+    background-color: #fff;
+    transition: ease-in .4s;
+    color: black;
+}
+
+#fotoindex{
+    height: 100%;
+    width: 100%;    
+}
+
+#fotosobremi {
+    height: 100%;
+    width: 80%;
+}
+
+.contenedorfoto{
+    display: flex;
+    justify-content: center;
+}
+
+.textoinfo {
+    padding: 20px;
+}
+#footer {
+    background-color: rgb(70, 68, 68);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+    #menu {
+        width: 60%;
+        font-size: 1em;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding-top: 16vh;
+    }
+
+    main h1 {
+        font-size: 2.2em;
+    }
+
+    .textoportada {
+        font-size: 18px;
+    }
+
+    .portada {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 0.9em;
+    }
+
+    #index, #sobremi{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        padding: 10px;
+        height: auto;
+    }
+
+    main {
+        padding-top: 20vh;
+    }
+
+    .fotopersonal {
+        max-width: 100%;
+    }
+
+    .botondescargarcv {
+        font-size: 14px;
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+    .caja_contacto h2 {
+        font-size: 2rem;
+    }
+
+    .caja_contacto p {
+        font-size: 1.125rem;
+    }
+
+    .formulario h2 {
+        font-size: 1.75rem;
+    }
+
+    .campo label {
+        font-size: 1rem;
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .logopersonal {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25vh;
+    }
+
+    .portada {
+        margin-left: 0;
+    }
+
+    main h1 {
+        font-size: 1.5em;
+    }
+
+    .textoportada {
+        font-size: 16px;
+    }
+
+    .botondescargarcv {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .caja_contacto {
+        padding: 1.5%;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
+}
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    color: #fff;
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 3vw;
+    font-size: 4vw;
+    color: #fff
+}
+
+.caja-consultas {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    flex: 1;
+    font-size: 1.5vw;
+    margin-right: 10px;
+}
+
+.campo input,
+.campo textarea {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+
+.campo input:valid,
+.campo textarea:valid {
+    border: 2px solid green;
+}
+
+
+.campo input:invalid:focus,
+.campo textarea:invalid:focus,
+.campo input:invalid:blur,
+.campo textarea:invalid:blur {
+    border: 2px solid red;
+}
+
+.caja-consultas button {
+    padding: 10px;
+    background-color: #2eb3c5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.caja-consultas button:hover {
+    background-color: #1e737e;
+}
+
+#fotoportafolio{
+    padding-bottom: 5%;
+    width: 30%;
+    height: 30%;
+}
+
+#portadaportafolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 5%;
+}
+
+#contacto{
+    color: #fff;
+    padding-bottom: 5%;
+    width: 50%;
+}
